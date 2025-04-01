@@ -1,14 +1,30 @@
+import { ProfileForm } from "@/components/profileform";
+import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button"
+
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-amber-500">
-      <div className="bg-white p-2 px-5 m-2 rounded-4xl ring-1 ring-red-400 shadow-2xl">
+    <div className=" items-center justify-items-center min-h-screen p-8 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-amber-500">
+      <div className="bg-white p-2 px-5 m-2 ring-1 ring-red-400 shadow-2xl shadow-gray-400">
         <div className="bg-gradient-to-r from-slate-700 to-amber-800 via-amber-500 text-transparent bg-clip-text font-bold text-5xl">
-          My first Mono
+          My first Monorepo
         </div>
 
+      </div>
+      <div className=" mt-11">
+        <div>
+          <Button asChild className=" hover:scale-105">
+          <Link href ="https://idavid-ten.vercel.app/aboutMe" target="_blank" rel="noopener noreferrer"> My Journery</Link>
+        </Button>
+        </div>
+        <div className="mt-10">
+          <ProfileForm></ProfileForm>
+          
+        </div>       
       </div>
       
     </div>
